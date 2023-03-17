@@ -143,7 +143,7 @@
 </template>
 
 <script>
-import { fieldTypeOps, typeMapping, primaryKeyOps } from "../dict";
+import { fieldTypeOps, typeMapping, primaryKeyOps } from "../../js/dict";
 import { cloneDeep } from "loadsh";
 export default {
   props: {

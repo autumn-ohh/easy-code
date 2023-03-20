@@ -29,7 +29,6 @@
             <el-form-item prop="type" v-if="scope.row.editing">
               <el-select
                 v-model="scope.row.type"
-                @change="scope.row.length = typeMapping[scope.row.type].length"
               >
                 <el-option-group
                   v-for="group in fieldTypeOps"

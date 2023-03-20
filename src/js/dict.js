@@ -34,105 +34,6 @@ export const fieldTypeOps = [
   },
 ];
 
-// 数据库类型与数据库类型长度、Java类型映射表
-export const typeMapping = {
-  // 数值类型
-  TINEINT: {
-    length: 3,
-    javaType: "Integer",
-  },
-  SMALLINT: {
-    length: 5,
-    javaType: "Integer",
-  },
-  MEDIUMINT: {
-    length: 8,
-    javaType: "Integer",
-  },
-  INT: {
-    length: 11,
-    javaType: "Integer",
-  },
-  BIGINT: {
-    length: 20,
-    javaType: "Long",
-  },
-  FLOAT: {
-    length: undefined,
-    javaType: "Float",
-  },
-  DOUBLE: {
-    length: undefined,
-    javaType: "Double",
-  },
-  DECIMAL: {
-    length: "10,0",
-    javaType: "String",
-  },
-  // 字符串类型
-  CHAR: {
-    length: 1,
-    javaType: "String",
-  },
-  VARCHAR: {
-    length: 32,
-    javaType: "String",
-  },
-  TINYBLOB: {
-    length: undefined,
-    javaType: "String",
-  },
-  TINYTEXT: {
-    length: undefined,
-    javaType: "String",
-  },
-  BLOB: {
-    length: undefined,
-    javaType: "String",
-  },
-  TEXT: {
-    length: undefined,
-    javaType: "String",
-  },
-  MEDIUMBLOB: {
-    length: undefined,
-    javaType: "String",
-  },
-  MEDIUMTEXT: {
-    length: undefined,
-    javaType: "String",
-  },
-  LONGBLOB: {
-    length: undefined,
-    javaType: "String",
-  },
-  LONGTEXT: {
-    length: undefined,
-    javaType: "String",
-  },
-  // 时间和日期类型
-  DATE: {
-    length: undefined,
-    javaType: "Date",
-  },
-  TIME: {
-    length: undefined,
-    javaType: "Date",
-  },
-  YEAR: {
-    length: undefined,
-    javaType: "Date",
-  },
-  DATETIME: {
-    length: undefined,
-    javaType: "Date",
-  },
-  TIMESTAMP: {
-    length: undefined,
-    javaType: "Date",
-  },
-};
-
 // 主键类型字典
 export const primaryKeyOps = {
   None: {
@@ -148,3 +49,134 @@ export const primaryKeyOps = {
     sql: undefined,
   },
 };
+
+// 类型映射
+export const defaultTypeMapperData = [
+  {
+    matchType: "Regex",
+    columnType: "varchar(\\(\\d+\\))?",
+    javaType: "java.lang.String",
+  },
+  {
+    matchType: "Regex",
+    columnType: "char(\\(\\d+\\))?",
+    javaType: "java.lang.String",
+  },
+  {
+    matchType: "Regex",
+    columnType: "varchar(\\(\\d+\\))?",
+    javaType: "java.lang.String",
+  },
+  {
+    matchType: "Regex",
+    columnType: "varchar(\\(\\d+\\))?",
+    javaType: "java.lang.String",
+  },
+  {
+    matchType: "Regex",
+    columnType: "varchar(\\(\\d+\\))?",
+    javaType: "java.lang.String",
+  },
+  {
+    matchType: "Regex",
+    columnType: "varchar(\\(\\d+\\))?",
+    javaType: "java.lang.String",
+  },
+  {
+    matchType: "Regex",
+    columnType: "varchar(\\(\\d+\\))?",
+    javaType: "java.lang.String",
+  },
+];
+
+// 匹配模式下拉选项
+export const matchTypeOptions = [
+  {
+    value: "Regex",
+    label: "Regex",
+  },
+  {
+    value: "Ordinary",
+    label: "Ordinary",
+  },
+];
+
+// java类型下拉选项
+export const javaTypeOptions = [
+  {
+    value: "java.lang.String",
+    label: "java.lang.String",
+  },
+  {
+    value: "java.lang.Integer",
+    label: "java.lang.Integer",
+  },
+  {
+    value: "java.lang.Long",
+    label: "java.lang.Long",
+  },
+  {
+    value: "java.util.Boolean",
+    label: "java.util.Boolean",
+  },
+  {
+    value: "java.util.Date",
+    label: "java.util.Date",
+  },
+  {
+    value: "java.time.LocalDateTime",
+    label: "java.time.LocalDateTime",
+  },
+  {
+    value: "java.time.LocalDate",
+    label: "java.time.LocalDate",
+  },
+  {
+    value: "java.time.LocalTime",
+    label: "java.time.LocalTime",
+  },
+  {
+    value: "java.lang.Short",
+    label: "java.lang.Short",
+  },
+  {
+    value: "java.lang.Byte",
+    label: "java.lang.Byte",
+  },
+  {
+    value: "java.lang.Character",
+    label: "java.lang.Character",
+  },
+  {
+    value: "java.math.BigDecimal",
+    label: "java.math.BigDecimal",
+  },
+  {
+    value: "java.math.BigInteger",
+    label: "java.math.BigInteger",
+  },
+  {
+    value: "java.lang.Double",
+    label: "java.lang.Double",
+  },
+  {
+    value: "java.lang.Float",
+    label: "java.lang.Float",
+  },
+  {
+    value: "java.lang.String[]",
+    label: "java.lang.String[]",
+  },
+  {
+    value: "java.util.List",
+    label: "java.util.List",
+  },
+  {
+    value: "java.util.Set",
+    label: "java.util.Set",
+  },
+  {
+    value: "java.util.Map",
+    label: "java.util.Map",
+  },
+];
